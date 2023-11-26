@@ -43,4 +43,4 @@ def send_data():
 # Use the 'PORT' environment variable provided by Heroku for dynamic port binding
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # Use port 5000 if not provided
-    app.run(debug=True, port=port)
+    app.run(debug=False, port=port)
