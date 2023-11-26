@@ -1,1 +1,1 @@
-web: gunicorn msubotserver:app
+web: python test.py
