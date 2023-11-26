@@ -6,7 +6,7 @@ import os  # Import the 'os' module
 app = Flask(__name__)
 
 # Replace 'mysql://username:password@hostname:port/database' with your actual connection string
-connection_string = 'mysql://yqrvk30mq03mifvh1090:pscale_pw_4J77B9EhBMvhh1bx6s1zVawxzPjf6OTfMrZWtNc350j@aws.connect.psdb.cloud:3306/msubotdb'
+connection_string = 'mysql://pm8cfhicxbsdjtb8gyfc:pscale_pw_D44uw2QeL5oyqhRHiO8DN4ceTdIFz5dIKlzbd01GG30@aws.connect.psdb.cloud:3306/msubotdb?ssl_ca=cacert.pem&ssl=true'
 engine = create_engine(connection_string)
 
 # Heroku app URL
