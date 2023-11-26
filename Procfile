@@ -1,1 +1,1 @@
-web: gunicorn server.py:app
+web: gunicorn msubotserver:app
