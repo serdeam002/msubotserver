@@ -9,7 +9,7 @@ connection_string = 'mysql://24my8fz00ty91mboo88m:pscale_pw_1WZLu373165m46cl7KPy
 engine = create_engine(connection_string)
 
 # Heroku app URL
-heroku_app_url = 'YOUR_HEROKU_APP_URL'
+heroku_app_url = 'https://msubotserver-8a9bb5aee729.herokuapp.com/'
 
 @app.route('/fetchData', methods=['GET'])
 def fetch_data():
