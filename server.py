@@ -13,8 +13,8 @@ CORS(app)
 # Create a MySQL connection
 db = MySQLdb.connect(
     host="aws.connect.psdb.cloud",
-    user="bi8qbj60okmwdbpfgasr",
-    passwd="pscale_pw_PGeQTxqRzzuh1GU8Ab1XuwQVizXOcDJrm8J4wk5kUeL",
+    user="w5nl2ipnvgso7hgbatjb",
+    passwd="pscale_pw_LXxna9Dgjy7P9e3828jhPUi8Gtx7W0RzCxaPaUMU1GH",
     db="msubotdb",
     autocommit=True,
     ssl_mode="VERIFY_IDENTITY",
