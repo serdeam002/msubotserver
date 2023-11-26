@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from sqlalchemy import create_engine, text
 import requests
+import os  # Import the 'os' module
 
 app = Flask(__name__)
 
@@ -15,7 +16,7 @@ heroku_app_url = 'https://msubotserver-8a9bb5aee729.herokuapp.com'
 def fetch_data():
     try:
         # Use the PlanetScale connection to execute the query
-        query = text('SELECT * FROM serials')
+        query = text('SELECT * FROM serials')  # Replace 'your_table' with your actual table name
         with engine.connect() as connection:
             result = connection.execute(query)
 
@@ -39,5 +40,7 @@ def send_data():
         print(f"Error sending data to Heroku: {str(e)}")
         return jsonify({'error': 'Internal Server Error'}), 500
 
+# Use the 'PORT' environment variable provided by Heroku for dynamic port binding
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get('PORT', 5000))  # Use port 5000 if not provided
+    app.run(debug=True, port=port)
